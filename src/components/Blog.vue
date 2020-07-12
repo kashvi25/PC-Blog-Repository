@@ -117,19 +117,20 @@ p {
 .card {
   position: relative;
 }
-.btn-floating i {
+.btn-floating {
     background-color: #C4C4C4;
     cursor: pointer;
+    position: relative;
 }
 .btn-large {
-   position: absolute;
+   position: relative;
    background-color: #C4C4C4;
    margin-right: 110px;
    margin-bottom: -20px;
    cursor: pointer;
 }
 .btn {
-   position: absolute;
+   position: relative;
    background-color: #C4C4C4;
    top: 100px;
    cursor: pointer;

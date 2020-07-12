@@ -32,6 +32,8 @@
         <div class="field center-align">
             <button class="btn">Post</button>
         </div>
+        <br/>
+        <br/>
         </form>
     </div>
 </template>
@@ -62,8 +64,14 @@ h2 {
   font-weight: lighter;
 }
 .btn {
+  top: 10px;
+  /* bottom: 30px; */
+  text-align: center;
   background-color: #8FC586;
   font-family: Raleway;
+}
+button {
+    background-color: #8FC586;
 }
 label {
     font-size: 16px;
@@ -83,7 +91,7 @@ label {
     text-align: left;
 } */
 .container {
-  width: 40%;
+  width: 500px;
   background: #C2C2C2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   left: 80px;
