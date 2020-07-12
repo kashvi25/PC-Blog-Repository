@@ -1,17 +1,18 @@
 <template>
     <div class="blog">
+        <!-- <input type="text" v-model="searchTerm">  -->
         <h2>PilotCity Blog Posts:</h2>
         <!-- <div id="rectangle"></div> -->
         <div class="blog container">
-            <div class="card" v-for="post in posts" :key="post.id">
+            <div class="card" v-for="post in filteredPosts" :key="post.id">
                 <div class="card-content">
                     <h3><br>{{ post.author }}: {{ post.subject }}</h3>
                     <h4>{{ post.date }}<br>{{ post.time }}</h4>
                     <p>{{ post.message }}</p>
                 </div>
                 <a href="" class="btn-floating halfway-fab">
-                  <i class="material-icons">create</i>
-                  <!-- //<router-link :to="">
+                    <i class="material-icons">create</i>
+                  <!-- <router-link :to="">
                   </router-link> -->
                 </a>
             </div>
@@ -19,9 +20,9 @@
         <br/>
         <br/>
         <a href="" class="btn-floating btn-large halfway-fab">
-          <i class="material-icons">add</i>
-          <!-- //<router-link :to="">
-          </router-link> -->
+          <router-link :to="{ name: 'AddPost' }">
+            <i class="material-icons">add</i>
+          </router-link>
         </a>
     </div>
 </template>
@@ -36,11 +37,19 @@ export default {
             posts: [
                 // { subject: 'Hackathon Announcement', slug: 'hackathon-announcement', author: 'Derick Lee', date: 'July 7, 2020', message: 'A reminder for fellows to come to our Hackathon this Friday!', id: '1'},
                 // { subject: 'PilotCity Videoask Announcement', slug: 'pilotcity-videoask-announcement', author: 'Kenny Bo', date: 'July 8, 2020', message: 'Make sure to answer the videoask question by Friday!', id: '2'}
-            ]
+            ],
+            searchTerm: ''
         }
     },
     methods: {
 
+    },
+    computed: {
+        filteredPosts(){
+            return this.posts.filter(post => {
+                return post.message.match(this.searchTerm)
+            })
+        }
     },
     created(){
         //fetch data from firestore
