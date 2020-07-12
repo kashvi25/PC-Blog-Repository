@@ -87,5 +87,6 @@ nav i.material-icons {
     top: 75px;
     left: 25px;
     box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 </style>

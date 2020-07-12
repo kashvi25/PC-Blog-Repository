@@ -9,8 +9,20 @@
                     <h4>{{ post.date }}<br>{{ post.time }}</h4>
                     <p>{{ post.message }}</p>
                 </div>
+                <a href="" class="btn-floating halfway-fab">
+                  <i class="material-icons">create</i>
+                  <!-- //<router-link :to="">
+                  </router-link> -->
+                </a>
             </div>
         </div>
+        <br/>
+        <br/>
+        <a href="" class="btn-floating btn-large halfway-fab">
+          <i class="material-icons">add</i>
+          <!-- //<router-link :to="">
+          </router-link> -->
+        </a>
     </div>
 </template>
 
@@ -95,5 +107,22 @@ p {
 }
 .card {
   position: relative;
+}
+.btn-floating i {
+    background-color: #C4C4C4;
+    cursor: pointer;
+}
+.btn-large {
+   position: absolute;
+   background-color: #C4C4C4;
+   margin-right: 110px;
+   margin-bottom: -20px;
+   cursor: pointer;
+}
+.btn {
+   position: absolute;
+   background-color: #C4C4C4;
+   top: 100px;
+   cursor: pointer;
 }
 </style>
