@@ -9,28 +9,28 @@
                 </div>
                 <div class="field author">
                     <label for="author">Blog Post Author:</label>
-                    <input type="text" name="author">
+                    <input type="text" name="author" v-model="author">
                 </div>
                 <div class="field date">
                     <label for="date">Date of Post:</label>
                     <br/>
                     <label class="grey-text">EX. November 11, 2011</label>
-                    <input type="text" name="date" >
+                    <input type="text" name="date" v-model="date">
                 </div>
                 <div class="field time">
                     <label for="time">Time of Post:</label>
                     <br/>
                     <label class="grey-text">EX. 11:00 AM</label>
-                    <input type="text" name="time" >
+                    <input type="text" name="time" v-model="time">
                 </div>
                 <div class="field message">
                     <label for="message">Blog Post Message:</label>
-                    <input type="text" name="message">
+                    <input type="text" name="message" v-model="message">
                 </div>
             </div>
             <br/>
         <div class="field center-align">
-            <button class="btn">Post</button>
+            <button class="v-btn x-large">Post</button>
         </div>
         <br/>
         <br/>
@@ -44,6 +44,11 @@ export default {
     data(){
         return{
             subject: null,
+            author: null,
+            date: null,
+            time: null,
+            message: null
+
         }
     },
     methods: {
